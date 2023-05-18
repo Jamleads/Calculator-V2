@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #014b71, #014c3b);
+}
+.calculator-grid {
+  border: solid 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: solid white 1px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  /* border-radius: 50%; */
+}
+.calculator-grid > button:hover {
+  background-color: rgba(186, 226, 173, 0.9);
+}
+.span-two {
+  grid-column: span 2;
+}
+.output {
+  grid-column: -1/1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-uperand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-uperand {
+  color: white;
+  font-size: 2rem;
+}
